@@ -1,70 +1,33 @@
+Equate pins:  cell child and/or child has no elements.
+
+Subcircuit pins:
+Circuit 1: child                           |Circuit 2: child                           
+-------------------------------------------|-------------------------------------------
+x                                          |x                                          
+y                                          |y                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes child and child are equivalent.
 
 Subcircuit summary:
-Circuit 1: spice_simple                    |Circuit 2: spice_B_simple                  
+Circuit 1: verilog_simple                  |Circuit 2: spice_simple                    
 -------------------------------------------|-------------------------------------------
-child (2)                                  |(no matching element)                      
-(no matching element)                      |r (2)                                      
-(no matching element)                      |c (2)                                      
-Number of devices: 2 **Mismatch**          |Number of devices: 4 **Mismatch**          
+child (2)                                  |child (2)                                  
+Number of devices: 2                       |Number of devices: 2                       
 Number of nets: 3                          |Number of nets: 3                          
 ---------------------------------------------------------------------------------------
-NET mismatches: Class fragments follow (with fanout counts):
-Circuit 1: spice_simple                    |Circuit 2: spice_B_simple                  
+Resolving automorphisms by property value.
+Resolving automorphisms by pin name.
+Netlists match uniquely.
+Circuits match correctly.
 
+Subcircuit pins:
+Circuit 1: verilog_simple                  |Circuit 2: spice_simple                    
+-------------------------------------------|-------------------------------------------
+b                                          |b                                          
+c                                          |c                                          
+a                                          |a                                          
 ---------------------------------------------------------------------------------------
-Net: a_s                                   |Net: a_sB                                  
-  child/x = 2                              |  r/(end_a|end_b) = 2                      
-                                           |  c/top = 2                                
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-(no matching net)                          |Net: c_sB                                  
-                                           |  r/(end_a|end_b) = 1                      
-                                           |  c/bottom = 1                             
-                                           |                                           
-(no matching net)                          |Net: b_sB                                  
-                                           |  r/(end_a|end_b) = 1                      
-                                           |  c/bottom = 1                             
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: c_s                                   |(no matching net)                          
-  child/y = 1                              |                                           
-                                           |                                           
-Net: b_s                                   |(no matching net)                          
-  child/y = 1                              |                                           
----------------------------------------------------------------------------------------
-DEVICE mismatches: Class fragments follow (with node fanout counts):
-Circuit 1: spice_simple                    |Circuit 2: spice_B_simple                  
-
----------------------------------------------------------------------------------------
-(no matching instance)                     |Instance: child_Bmychild_B2_sB/c1          
-                                           |  top = 4                                  
-                                           |  bottom = 2                               
-                                           |                                           
-(no matching instance)                     |Instance: child_Bmychild_B1_sB/c1          
-                                           |  top = 4                                  
-                                           |  bottom = 2                               
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-(no matching instance)                     |Instance: child_Bmychild_B2_sB/r1          
-                                           |  (end_a,end_b) = (4,2)                    
-                                           |                                           
-                                           |                                           
-(no matching instance)                     |Instance: child_Bmychild_B1_sB/r1          
-                                           |  (end_a,end_b) = (4,2)                    
-                                           |                                           
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Instance: childmychild2_s                  |(no matching instance)                     
-  x = 2                                    |                                           
-  y = 1                                    |                                           
-                                           |                                           
-Instance: childmychild1_s                  |(no matching instance)                     
-  x = 2                                    |                                           
-  y = 1                                    |                                           
----------------------------------------------------------------------------------------
-Netlists do not match.
-The top level cell failed pin matching.
+Cell pin lists are equivalent.
+Device classes verilog_simple and spice_simple are equivalent.
+Circuits match uniquely.

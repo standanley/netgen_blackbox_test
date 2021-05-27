@@ -1,16 +1,16 @@
 * test
 
-.subckt child_B x y
+.subckt child x y
 * some random implementation, just for testing
 * netgen should not use this info in the final matching
 R1 x y 10k
 C1 x y 1p
 .ends
 
-.subckt spice_B_simple a_sB b_sB c_sB
+.subckt spice_B_simple a b c
 
-xmychild_B1_sB a_sB b_sB child_B
-xmychild_B2_sB a_sB c_sB child_B
+xmychild_B1 a b child
+xmychild_B2 a c child
 
 .ends
 

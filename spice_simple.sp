@@ -6,10 +6,10 @@
 R1 x y 1k
 .ends
 
-.subckt spice_simple a_s b_s c_s
+.subckt spice_simple a b c
 
-xmychild1_s a_s b_s child
-xmychild2_s a_s c_s child
+xmychild1 a b child
+xmychild2 a c child
 
 .ends
 
@@ -18,4 +18,4 @@ xmychild2_s a_s c_s child
 *vfora nodea 0 .5
 *vforb nodeb 0 .8
 *cforc nodec 0 1p
-*xdut nodea nodeb nodec spice_simple
+*xdut nodea nodeb nodec spiceimple

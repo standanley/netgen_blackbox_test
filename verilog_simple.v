@@ -2,19 +2,19 @@
 //
 
 module verilog_simple (
-    inout a_s,
-    inout b_s,
-    inout c_s
+    inout a,
+    inout b,
+    inout c
 );
 
 
-    child_v mychild1_v (
-        .child_x_v(a_s),
-        .child_y_v(b_s)
+    child mychild1_v (
+        .x_v(a),
+        .y_v(b)
     );
-    child_v mychild2_v (
-        .child_x_v(a_s),
-        .child_y_v(c_s)
+    child mychild2_v (
+        .x_v(a),
+        .y_v(c)
     );
 
 
@@ -22,10 +22,10 @@ endmodule
 
 
 module child (
-    inout child_x,
-    inout child_y,
+    inout x,
+    inout y,
 );
     // behavioral! netgen should blackbox this
-    always @(posedge child_x) child_y <= 1;
+    always @(posedge x) y <= 1;
 endmodule
     
